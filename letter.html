@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordInput").value;
+            if (password === "october42023") { 
+                document.getElementById("passwordOverlay").style.display = "none";
+                document.getElementById("hiddenContent").style.display = "block";
+            } else {
+                alert("Incorrect password! Try again.");
+            }
+        }
+        function viewAsGuest() {
+            document.getElementById("passwordOverlay").style.display = "none";
+            document.getElementById("hiddenContent").innerHTML = `
+                <h2>Welcome, Guest!</h2>
+                <h2>Continue ⬇️</h2>
+                <div class='gallery'>
+                    <div class='photo' onclick="location.href='years/2024.html';">
+                        <div class='tape'></div>
+                        <img src='assets/2024-0.jpg' alt='Memory 1'>
+                        <h1> 2024 </h1>
+                    </div>
+                    <div class='photo' style='transform: rotate(5deg);' onclick="location.href='years/2025.html';">
+                        <div class='tape'></div>
+                        <img src='assets/2025-0.jpg' alt='Memory 2'>
+                        <h1> 2025 </h1>
+                    </div>
+                </div>
+            `;            
+            document.getElementById("hiddenContent").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-right">
+        <img src="assets/header.gif" class="header-logo">
+        <h2>Harle & Rhea Archive</h2>
+        </div>
+        <div>
+        <a href="home.html">HOME</a>
+        </div>
+    </header>
+
+    <div id="passwordOverlay" class="password-overlay">
+        <h2>Enter Password to Read the Letter</h2>
+        <input type="password" id="passwordInput">
+        <button onclick="checkPassword()">Submit</button>
+        <button onclick="viewAsGuest()">View as Guest</button>
+    </div>
+
+    <div id="hiddenContent" class="hidden-content">
+    <h1>hi rhea!</h1>
+    <p>
+        surprise! happy valentines day! HASHDAHS first of all im sorry na di kita mabibigyan ng 
+        <br>flowers ngayong valentines, alam mo naman yung financial situation HAHAHA sana makabenta
+        <br> na soon 😭 i hope u still like this gift, small compilation ng mga pics and memories natin
+        <br> throughout 2024 and early this year. thank you for always being there, for making an
+        <br> effort to see me kahit pumunta ka sa bahay namin. i know na masakit sa bulsa yung pamasahe HASHDHA 
+        <br> thank you for being understanding lagi kapag nalalate ako or kapag may disagreements tayo
+        <br> thank you dahil di ka pa naiinis sa pagiging clingy ko sa personal HASHDAHD
+        <br> im sorry if mabagal ako magreply/seen minsan and sa mga overall pagkukulang ko,
+        <br> and hopefully makabawi ako and mas madalas tayo magdate ngayong 2025. sana makapagceleb pa
+        <br> tayo ng mas maraming valentines, monthsaries, and anniversaries in the future. and lastly,
+        <br> i hope you know na i'll always be here for you and i love you ❤️
+        <br>
+        <br> 
+        <br> scroll down to..
+    </p>
+    
+
+    <h2>Continue ⬇️</h2>
+    <div class="gallery">
+        <div class="photo" onclick="location.href='years/2024.html';">
+            <div class="tape"></div>
+            <img src="assets/2024-0.jpg" alt="Memory 1">
+            <h1> 2024 </h1>
+        </div>
+        <div class="photo" style="transform: rotate(5deg);" onclick="location.href='years/2025.html';">
+            <div class="tape"></div>
+            <img src="assets/2025-0.jpg" alt="Memory 2">
+            <h1> 2025 </h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
